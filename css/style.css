@@ -88,9 +88,9 @@ h1, h2, h3, h4, h5, h6 {
     transition: .5s;
 }
 
-.apple-nav-wrapper {
+/* .apple-nav-wrapper {
     background: linear-gradient(180deg, rgba(227, 243, 255, 0.96), rgba(243, 249, 255, 0.94));
-}
+} */
 
 .apple-navbar {
     padding: 12px 10px;
