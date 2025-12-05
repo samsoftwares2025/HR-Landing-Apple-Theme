@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SamSoftwares – Flight Speed HR Platform</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="HR Software, Human Resource Management, Payroll, Onboarding" name="keywords">
+    <meta content="SamSoftwares is an all-in-one HR platform for modern teams." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter for Apple-like feel + Space Grotesk for headings -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet (custom theme) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top apple-nav-wrapper">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light apple-navbar">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <span class="brand-icon me-2"></span>
+                    <span class="brand-text">SamSoftwares 
+                        <!-- <span class="brand-text-light">air</span></span> -->
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto align-items-lg-center">
+                        <a href="#hero" class="nav-item nav-link active">Overview</a>
+                        <a href="#features" class="nav-item nav-link">Why SamSoftwares</a>
+                        <a href="#services" class="nav-item nav-link">Platform</a>
+                        <a href="#pricing" class="nav-item nav-link">Pricing</a>
+                        <a href="#contact" class="nav-item nav-link d-none d-lg-inline-flex">Contact</a>
+                        <a href="#demo" class="btn btn-sm btn-primary rounded-pill ms-lg-3 mt-2 mt-lg-0 px-4">
+                            Book a demo
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div id="hero" class="container-fluid pb-5 hero-header apple-hero">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center mb-5">
+                <!-- Left side text -->
+                <div class="col-lg-6">
+                    <div class="hero-kicker">HR platform</div>
+                    <div class="hero-logo">SamSoftwares <span>air</span></div>
+                    <h1 class="hero-title mb-3">
+                        Flight speed<br>for HR teams.
+                    </h1>
+                    <p class="hero-subtitle mb-3">
+                        Hire, onboard, pay and grow your people in a single calm workspace – with analytics that move as
+                        fast as your business.
+                    </p>
+
+                    <div class="hero-badges mb-4">
+                        <div class="hero-badge">
+                            <span class="hero-badge-dot"></span>
+                            Go live in under 7 days
+                        </div>
+                        <div class="hero-badge">
+                            <span class="hero-badge-dot"></span>
+                            Built for teams 25–5,000
+                        </div>
+                        <div class="hero-badge">
+                            <span class="hero-badge-dot"></span>
+                            ISO-ready security
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap align-items-center gap-2">
+                        <a href="#demo" class="btn btn-primary btn-apple-cta rounded-pill px-4 py-2">
+                            Get live demo
+                        </a>
+                        <a href="#pricing" class="btn btn-outline-primary btn-apple-ghost rounded-pill px-4 py-2">
+                            View pricing
+                        </a>
+                    </div>
+                    <p class="hero-note mt-3 mb-0">
+                        Free for your first 25 employees · No credit card required
+                    </p>
+                </div>
+
+                <!-- Right side “device” card -->
+                <div class="col-lg-6">
+                    <div class="device-frame">
+                        <div class="device-pill"></div>
+                        <div class="device">
+                            <div class="device-edge"></div>
+                            <div class="device-notch"></div>
+
+                            <div class="device-header">
+                                <span class="device-header-meta">Today · 9:41</span>
+                                <span class="device-badge">People Ops cockpit</span>
+                            </div>
+
+                            <div class="device-title">Live workforce health</div>
+                            <div class="device-subtitle">
+                                Monitor hiring, engagement and retention in real time – across every office and team.
+                            </div>
+
+                            <div class="device-metrics">
+                                <div class="metric-card">
+                                    <div class="metric-label">Time-to-hire</div>
+                                    <div class="metric-value">9 days</div>
+                                    <span class="metric-chip">32% faster</span>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-label">Engagement</div>
+                                    <div class="metric-value">94%</div>
+                                    <span class="metric-chip">Pulse · Q2</span>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-label">Attrition</div>
+                                    <div class="metric-value">-18%</div>
+                                    <span class="metric-chip">vs last year</span>
+                                </div>
+                            </div>
+
+                            <div class="device-timeline">
+                                <div class="timeline-row">
+                                    <div class="timeline-label">
+                                        <span class="timeline-dot"></span>
+                                        Product onboarding wave
+                                    </div>
+                                    <div class="timeline-meta">14 new hires · Day 3</div>
+                                </div>
+                                <div class="timeline-row">
+                                    <div class="timeline-label">
+                                        <span class="timeline-dot timeline-dot-soft"></span>
+                                        Performance cycles
+                                    </div>
+                                    <div class="timeline-meta">4 teams in review</div>
+                                </div>
+                                <div class="timeline-row">
+                                    <div class="timeline-label">
+                                        <span class="timeline-dot timeline-dot-faint"></span>
+                                        Leave balance risk
+                                    </div>
+                                    <div class="timeline-meta">7 people above limit</div>
+                                </div>
+                            </div>
+
+                            <div class="device-footer">
+                                <div class="avatar-group">
+                                    <div class="avatar"></div>
+                                    <div class="avatar"></div>
+                                    <div class="avatar"></div>
+                                    <span class="avatar-label">HR, Finance & IT in sync</span>
+                                </div>
+                                <span class="device-footer-pill">
+                                    Syncs with payroll & ATS
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Short capability strip -->
+            <div class="row g-4 hero-cap-strip">
+                <div class="col-md-6 col-lg-3">
+                    <div class="hero-cap-item">
+                        <i class="fa fa-user-check text-primary"></i>
+                        <h5>HR Management</h5>
+                        <p>Core HR, documents & profiles fully centralised.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="hero-cap-item">
+                        <i class="fa fa-briefcase text-primary"></i>
+                        <h5>Hire & Onboard</h5>
+                        <p>From offer letter to day one in one flow.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="hero-cap-item">
+                        <i class="fa fa-clock text-primary"></i>
+                        <h5>Time & Attendance</h5>
+                        <p>Modern time tracking & smart approvals.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="hero-cap-item">
+                        <i class="fa fa-chart-line text-primary"></i>
+                        <h5>Performance</h5>
+                        <p>Reviews, goals and continuous feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- About Start -->
+    <!-- About / Story Start -->
+    <div id="about" class="container-fluid py-5 about-section">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <!-- Text first on desktop -->
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <span class="about-kicker">Our story</span>
+                    <h1 class="mb-3">
+                        The <span class="text-primary">HR engine</span> behind modern teams.
+                    </h1>
+                    <p class="mb-3">
+                        We’ve spent years simplifying HR operations and helping companies build stronger teams.
+                        Our mission is to modernise the employee experience and bring clarity to everyday HR workflows.
+                    </p>
+                    <p class="mb-4">
+                        From recruitment to engagement, SamSoftwares empowers growing organisations with automation,
+                        insights and a delightful experience for every employee.
+                    </p>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <div class="about-point">
+                                <i class="fa fa-check about-point-icon"></i>
+                                <div>
+                                    <h6 class="mb-1">Trusted by leading companies</h6>
+                                    <small class="text-muted">Across industries and regions</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="about-point">
+                                <i class="fa fa-check about-point-icon"></i>
+                                <div>
+                                    <h6 class="mb-1">Expert HR success team</h6>
+                                    <small class="text-muted">Implementation in days, not months</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats d-flex flex-wrap gap-3">
+                        <div class="about-stat-pill">
+                            <span class="about-stat-label">Customer satisfaction</span>
+                            <span class="about-stat-value">97%</span>
+                        </div>
+                        <div class="about-stat-pill">
+                            <span class="about-stat-label">HR time saved</span>
+                            <span class="about-stat-value">40%</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-4">
+                        <a class="btn btn-primary rounded-pill px-4 me-2" href="#demo">Read our story</a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2" href="#"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Images on the right -->
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="row g-3 about-media">
+                        <div class="col-6">
+                            <div class="about-image-card shadow-soft rounded-4 overflow-hidden">
+                                <img class="img-fluid" src="img/ChatGPT Image Nov 29, 2025, 11_58_23 AM.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex flex-column">
+                            <div class="about-image-card shadow-soft rounded-4 overflow-hidden mb-3 flex-grow-1">
+                                <img class="img-fluid h-100 w-100 object-fit-cover"
+                                    src="img/ChatGPT Image Nov 29, 2025, 01_57_33 PM.png" alt="">
+                            </div>
+                            <!-- BLUE highlight instead of green -->
+                            <div
+                                class="about-pill d-flex align-items-center text-center px-4 py-3 rounded-4 shadow-soft">
+                                <h4 class="text-white lh-base mb-0">
+                                    Your HR partner<br>for growth &amp; clarity.
+                                </h4>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- About / Story End -->
+
+    <!-- About End -->
+
+
+    <!-- Feature Start -->
+    <div id="features" class="container-fluid py-5 bg-soft">
+        <div class="container">
+            <div class="text-center wow fadeIn" data-wow-delay="0.1s">
+                <div class="section-kicker">Why teams choose us</div>
+                <h1 class="mb-3">Everything HR needs in one calm view.</h1>
+                <p class="text-muted mb-5">
+                    From the first offer letter to every promotion, SamSoftwares keeps every touchpoint aligned,
+                    automated and auditable.
+                </p>
+            </div>
+            <div class="row g-4 align-items-stretch text-center">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">✈️</div>
+                        <h4>Streamlined recruitment</h4>
+                        <p>Simplify hiring with collaborative pipelines, automated emails and smart screening.</p>
+                        <span class="feature-tag">From requisition to offer</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">📁</div>
+                        <h4>Centralised employee data</h4>
+                        <p>All employee information organised, secure and searchable in one place.</p>
+                        <span class="feature-tag">Single source of truth</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">🤖</div>
+                        <h4>Automated HR processes</h4>
+                        <p>Onboarding, approvals, reminders and compliance checks handled for you.</p>
+                        <span class="feature-tag">Workflows without spreadsheets</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">💬</div>
+                        <h4>Employee engagement</h4>
+                        <p>Pulse surveys, check-ins and recognition tools built into everyday work.</p>
+                        <span class="feature-tag">Happier teams</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">📊</div>
+                        <h4>Data-driven insights</h4>
+                        <p>Real-time dashboards for headcount, diversity, attrition and more.</p>
+                        <span class="feature-tag">C-suite ready</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">📈</div>
+                        <h4>Scales with you</h4>
+                        <p>From fast-growing startups to global teams, Air grows with your org.</p>
+                        <span class="feature-tag">50–5,000 employees</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+
+    <!-- Project / Solutions Start -->
+   <!-- Innovations / Solutions Section -->
+    <!-- Innovations Section – Modern Apple Style -->
+    <section class="innovations-section py-5">
+        <div class="container py-5">
+
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+                <span class="innovations-kicker">Latest Features</span>
+                <h2 class="innovations-title">Our Newest HR Innovations</h2>
+                <p class="innovations-subtitle">
+                    Designed to deliver clarity, automation and delightful experiences for teams of every size.
+                </p>
+            </div>
+
+            <!-- Grid -->
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="innovation-tile">
+                        <div class="tile-icon">
+                            <img src="img/innovations-1.png" alt="">
+                        </div>
+                        <h4>Recruitment</h4>
+                        <p>128 implementations completed successfully.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="innovation-tile">
+                        <div class="tile-icon">
+                            <img src="img/innovations-2-3.png" alt="">
+                        </div>
+                        <h4>Onboarding</h4>
+                        <p>94 deployments helping new hires succeed from day one.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="innovation-tile">
+                        <div class="tile-icon">
+                            <img src="img/innovations-3-2.png" alt="">
+                        </div>
+                        <h4>Staffing</h4>
+                        <p>112 clients supported with resource optimization.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="innovation-tile">
+                        <div class="tile-icon">
+                            <img src="img/innovations-4.png" alt="">
+                        </div>
+                        <h4>Growth</h4>
+                        <p>76 completed performance & development cycles.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="innovation-tile">
+                        <div class="tile-icon">
+                            <img src="img/innovations-5-1.png" alt="">
+                        </div>
+                        <h4>Time & Payroll</h4>
+                        <p>88 automated workflows improving daily operations.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="innovation-tile">
+                        <div class="tile-icon">
+                            <img src="img/innovations-6-2.png" alt="">
+                        </div>
+                        <h4>Data Insights</h4>
+                        <p>105 reports delivered with real-time analytics.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Service Start -->
+    <!-- Services Section – Apple Style -->
+    <section id="services" class="services-section py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+
+                <!-- Left Text Content -->
+                <div class="col-lg-5">
+                    <span class="services-kicker">HR Services</span>
+                    <h1 class="mb-4">
+                        Smart, delightful <br>
+                        <span class="highlight-tag">HR tools</span> for modern teams
+                    </h1>
+                    <p>
+                        Powerful tools built to simplify work, boost productivity and create a seamless HR experience
+                        for everyone in your organisation.
+                    </p>
+                    <p class="mb-4">
+                        From automation to compliance, our HR suite delivers clarity, speed and consistency—helping
+                        teams operate efficiently and scale confidently.
+                    </p>
+
+                    <!-- Contact Bar -->
+                    <div class="contact-bar d-flex align-items-center p-3 rounded-4">
+                        <div class="contact-icon d-flex align-items-center justify-content-center rounded-4">
+                            <i class="fa fa-phone fa-2x text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h3 class="mb-1">+01 234 567 89</h3>
+                            <span>Call us anytime for a free consultation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Grid Items -->
+                <div class="col-lg-7">
+                    <div class="row g-4">
+
+                        <!-- Card 1 -->
+                        <div class="col-md-6">
+                            <div class="service-card glass">
+                                <div class="service-image">
+                                    <img src="img/ServiceHR - 1.png" alt="" class="img-fluid rounded-4">
+                                </div>
+                                <h3>HR Automation</h3>
+                                <p>
+                                    Replace manual tasks with workflows for approvals, reminders and daily operations.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-md-6">
+                            <div class="service-card">
+                                <div class="service-image">
+                                    <img src="img/ServiceHR - 2.png" alt="" class="img-fluid rounded-4">
+                                </div>
+                                <h3>Documents</h3>
+                                <p>
+                                    Store, organise and share documents securely with e-signatures and version control.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-md-6">
+                            <div class="service-card">
+                                <div class="service-image">
+                                    <img src="img/ServiceHR - 3.png" alt="" class="img-fluid rounded-4">
+                                </div>
+                                <h3>Compliance</h3>
+                                <p>
+                                    Stay audit-ready with automated compliance tracking and policy acknowledgements.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col-md-6">
+                            <div class="service-card glass">
+                                <div class="service-image">
+                                    <img src="img/ServiceHR - 4.png" alt="" class="img-fluid rounded-4">
+                                </div>
+                                <h3>Workspace</h3>
+                                <p>
+                                    Offer employees a sleek self-service hub for leave, attendance, payroll and more.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Service End -->
+
+
+    <!-- Pricing Start -->
+    <!-- Pricing Section – Apple Style -->
+    <section id="pricing" class="container-fluid pricing-section py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="pricing-kicker">Pricing</span>
+                <h2 class="pricing-title mb-2">
+                    Simple plans for every team
+                </h2>
+                <p class="pricing-subtitle">
+                    Choose the plan that matches where your organisation is today –
+                    and upgrade seamlessly as you grow.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Basic Plan -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="pricing-plan h-100">
+                        <div class="pricing-header">
+                            <i class="fa fa-user fa-2x"></i>
+                            <h3>Basic</h3>
+                            <p class="pricing-tagline">For small, growing teams</p>
+                            <p class="pricing-price">
+                                $29 <span>/ month</span>
+                            </p>
+                        </div>
+                        <ul class="pricing-features list-unstyled mt-3 mb-4">
+                            <li><i class="fa fa-check pricing-check"></i>Employee management</li>
+                            <li><i class="fa fa-check pricing-check"></i>Attendance tracking</li>
+                            <li><i class="fa fa-check pricing-check"></i>Basic payroll</li>
+                            <li class="text-muted"><i class="fa fa-minus me-2"></i>Integrations</li>
+                            <li class="text-muted"><i class="fa fa-minus me-2"></i>Priority support</li>
+                        </ul>
+                        <a href="#demo" class="btn btn-outline-primary rounded-pill w-100">
+                            Choose plan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Professional Plan (Featured) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="pricing-plan pricing-plan-featured h-100">
+                        <div class="pricing-label">Most popular</div>
+                        <div class="pricing-header">
+                            <i class="fa fa-users-cog fa-2x"></i>
+                            <h3>Professional</h3>
+                            <p class="pricing-tagline">For scaling organisations</p>
+                            <p class="pricing-price">
+                                $59 <span>/ month</span>
+                            </p>
+                        </div>
+                        <ul class="pricing-features list-unstyled mt-3 mb-4">
+                            <li><i class="fa fa-check pricing-check"></i>Everything in Basic</li>
+                            <li><i class="fa fa-check pricing-check"></i>Performance reviews</li>
+                            <li><i class="fa fa-check pricing-check"></i>Automated payroll</li>
+                            <li><i class="fa fa-check pricing-check"></i>Slack / Teams integrations</li>
+                            <li class="text-muted"><i class="fa fa-minus me-2"></i>Dedicated manager</li>
+                        </ul>
+                        <a href="#demo" class="btn btn-primary rounded-pill w-100">
+                            Start with Professional
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="pricing-plan h-100">
+                        <div class="pricing-header">
+                            <i class="fa fa-building fa-2x"></i>
+                            <h3>Enterprise</h3>
+                            <p class="pricing-tagline">For complex, global teams</p>
+                            <p class="pricing-price">
+                                Custom <span>pricing</span>
+                            </p>
+                        </div>
+                        <ul class="pricing-features list-unstyled mt-3 mb-4">
+                            <li><i class="fa fa-check pricing-check"></i>All Professional features</li>
+                            <li><i class="fa fa-check pricing-check"></i>Custom workflows</li>
+                            <li><i class="fa fa-check pricing-check"></i>API & integrations</li>
+                            <li><i class="fa fa-check pricing-check"></i>24/7 premium support</li>
+                            <li><i class="fa fa-check pricing-check"></i>Dedicated success manager</li>
+                        </ul>
+                        <a href="#demo" class="btn btn-outline-primary rounded-pill w-100">
+                            Talk to sales
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing End -->
+
+
+    <!-- Testimonial Start -->
+    <!-- Testimonials – Apple Style -->
+    <section class="testimonials-section py-5" id="demo">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <!-- Section header -->
+                    <div class="text-center mb-4">
+                        <span class="testimonials-kicker">Customer Stories</span>
+                        <h2 class="testimonials-title mb-2">
+                            Teams that run lighter with SamSoftwares Air
+                        </h2>
+                        <p class="testimonials-subtitle">
+                            HR leaders and managers share how they’ve reduced admin,
+                            increased engagement and gained real-time visibility.
+                        </p>
+                    </div>
+
+                    <!-- Carousel -->
+                    <div class="owl-carousel testimonial-carousel">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar">
+                                <img src="img/Testimonials-1.png" alt="Maria Thompson">
+                            </div>
+                            <div class="testimonial-body">
+                                <p class="testimonial-quote">
+                                    “Automated workflows saved us hours every week, and our employees
+                                    love the modern self-service experience.”
+                                </p>
+                                <h5 class="testimonial-name">Maria Thompson</h5>
+                                <span class="testimonial-role">Head of People, Fintech</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar">
+                                <img src="img/Testimonials-2.png" alt="David Chen">
+                            </div>
+                            <div class="testimonial-body">
+                                <p class="testimonial-quote">
+                                    “The analytics dashboard gives us instant insight into every part
+                                    of the employee lifecycle.”
+                                </p>
+                                <h5 class="testimonial-name">David Chen</h5>
+                                <span class="testimonial-role">VP HR, SaaS Company</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar">
+                                <img src="img/Testimonials-3.png" alt="Sofia Ramirez">
+                            </div>
+                            <div class="testimonial-body">
+                                <p class="testimonial-quote">
+                                    “HR requests dropped by 40% and employee satisfaction
+                                    went up significantly within one quarter.”
+                                </p>
+                                <h5 class="testimonial-name">Sofia Ramirez</h5>
+                                <span class="testimonial-role">People Ops Lead, Retail</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial End -->
+
+
+    <!-- Newsletter Start -->
+    <!-- Newsletter / Contact – Apple Style -->
+    <section id="contact" class="newsletter-section py-5">
+        <div class="container py-5">
+            <div class="row g-4 align-items-center">
+
+                <!-- Illustration -->
+                <div class="col-md-5">
+                    <div class="newsletter-illustration">
+                        <img class="img-fluid" src="img/newsletter.png" alt="HR Newsletter">
+                    </div>
+                </div>
+
+                <!-- Text + Form -->
+                <div class="col-md-7">
+                    <div class="newsletter-card">
+                        <h2 class="mb-3">
+                            Stay ahead with our
+                            <span class="newsletter-tag">HR updates</span>
+                        </h2>
+                        <p class="mb-4">
+                            Get product launches, HR playbooks and best practices delivered straight to your inbox.
+                        </p>
+
+                        <form class="newsletter-form" action="#" method="post">
+                            <div class="position-relative w-100">
+                                <input
+                                    type="email"
+                                    class="form-control newsletter-input"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+                                <button type="submit" class="btn newsletter-btn">
+                                    <i class="fa fa-paper-plane"></i>
+                                    <span>Subscribe</span>
+                                </button>
+                            </div>
+                            <small class="text-muted d-block mt-2">
+                                No spam. Only relevant HR content, once or twice a month.
+                            </small>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <h1 class="text-white">SamSoftwares</h1>
+                    </a>
+                    <p class="mb-4">
+                        SamSoftwares helps HR teams run faster, clearer and more confidently with an
+                        all-in-one, people-first platform.
+                    </p>
+                    <a class="btn btn-primary border-2 px-4 rounded-pill" href="#pricing">View pricing</a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Get in touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+01 234 567 89</p>
+                    <p><i class="fa fa-envelope me-3"></i>hello@samsoftwares.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href=""><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <h5 class="text-white mb-4">Company</h5>
+                    <a class="btn btn-link" href="#hero">About us</a>
+                    <a class="btn btn-link" href="#contact">Contact us</a>
+                    <a class="btn btn-link" href="">Privacy policy</a>
+                    <a class="btn btn-link" href="">Terms &amp; conditions</a>
+                    <a class="btn btn-link" href="">Careers</a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-white mb-4">Platform</h5>
+                    <a class="btn btn-link" href="#services">Recruitment</a>
+                    <a class="btn btn-link" href="#services">Onboarding</a>
+                    <a class="btn btn-link" href="#services">Employee management</a>
+                    <a class="btn btn-link" href="#services">Performance &amp; reviews</a>
+                    <a class="btn btn-link" href="#services">Payroll &amp; attendance</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <span id="year"></span> <a class="border-bottom" href="#">SamSoftwares</a>, all rights
+                        reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="#hero">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="#contact">Help</a>
+                            <a href="">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Small inline script for year in footer -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

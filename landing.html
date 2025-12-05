@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PeopleWave HR — Effortless HR at Flight Speed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Fonts (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --primary-bg: #e1f2ff;
+      --primary-bg-light: #f4f9ff;
+      --primary-text: #0359af;
+      --accent: #0077ff;
+      --dark: #0b2140;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      padding: 0.8rem 1rem;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--dark) !important;
+    }
+
+    .navbar-scrolled {
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-link {
+      font-weight: 500;
+      margin: 0 0.5rem;
+      color: #334155 !important;
+    }
+
+    .nav-link:hover {
+      color: var(--accent) !important;
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+      min-height: 100vh;
+      padding-top: 80px;
+      background: linear-gradient(
+        180deg,
+        var(--primary-bg) 0%,
+        var(--primary-bg-light) 100%
+      );
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-blur {
+      position: absolute;
+      width: 460px;
+      height: 460px;
+      background: radial-gradient(circle, #b5dcff 0, transparent 60%);
+      opacity: 0.8;
+      top: -120px;
+      right: -120px;
+      pointer-events: none;
+    }
+
+    .hero-title-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .hero-title-badge span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      margin-right: 8px;
+    }
+
+    .hero-heading {
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 700;
+      color: var(--primary-text);
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+
+    .hero-subheading {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: #475569;
+      max-width: 480px;
+    }
+
+    .hero-cta-btn {
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .hero-secondary-btn {
+      border-radius: 999px;
+      font-weight: 500;
+    }
+
+    .hero-meta {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-top: 1rem;
+    }
+
+    /* HERO MOCKUP */
+    .hero-mockup-wrapper {
+      position: relative;
+      perspective: 1400px;
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: 32px;
+      padding: 1.5rem;
+      background: radial-gradient(circle at 10% 0%, #f8fbff 0%, #cfe6ff 100%);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+      transform: rotateY(-14deg) rotateX(9deg);
+      transform-origin: center;
+      max-width: 420px;
+      margin-left: auto;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-card-title {
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .status-pill {
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.1);
+      color: #16a34a;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .hero-card-body {
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.68);
+      padding: 1rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .employee-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.4rem 0;
+      font-size: 0.85rem;
+    }
+
+    .employee-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #60a5fa, #38bdf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-right: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    .employee-info {
+      flex: 1;
+    }
+
+    .employee-name {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .employee-role {
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+
+    .employee-chip {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.08);
+      color: #1d4ed8;
+      font-weight: 500;
+    }
+
+    .hero-card-footer {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #475569;
+    }
+
+    .hero-card-footer strong {
+      color: var(--dark);
+    }
+
+    .hero-floating-tag {
+      position: absolute;
+      bottom: -16px;
+      right: -40px;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      background: #0f172a;
+      color: white;
+      font-size: 0.8rem;
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.4);
+      white-space: nowrap;
+    }
+
+    /* FEATURES */
+    .features-section {
+      padding: 5rem 0;
+      background: #ffffff;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.8rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .feature-card {
+      border-radius: 20px;
+      padding: 1.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+      height: 100%;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.12);
+    }
+
+    .feature-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: rgba(59, 130, 246, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+
+    .feature-title {
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: #0f172a;
+    }
+
+    .feature-text {
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+
+    /* FOOTER */
+    .footer {
+      padding: 2.5rem 0 1.5rem;
+      background: #f8fafc;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    .footer a {
+      color: #64748b;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 991.98px) {
+      .hero-section {
+        padding-top: 90px;
+        padding-bottom: 3rem;
+      }
+      .hero-card {
+        margin: 2rem auto 0;
+        transform: none;
+      }
+      .hero-floating-tag {
+        position: static;
+        margin-top: 1rem;
+        display: inline-flex;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">PeopleWave</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a
+              href="#demo"
+              class="btn btn-primary hero-cta-btn"
+              style="background: var(--accent); border-color: var(--accent)"
+              >Book a demo</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section" id="top">
+    <div class="hero-blur"></div>
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- TEXT -->
+        <div class="col-lg-6">
+          <div class="hero-title-badge">
+            <span></span> New • AI-powered HR suite
+          </div>
+          <h1 class="hero-heading">HR at flight speed.</h1>
+          <p class="hero-subheading">
+            Centralise people data, automate workflows, and give managers a
+            real-time view of every team — in a workspace your employees
+            actually like using.
+          </p>
+          <div class="mt-4 d-flex flex-wrap gap-2">
+            <a
+              href="#demo"
+              class="btn btn-primary hero-cta-btn me-2 mb-2"
+              style="background: var(--accent); border-color: var(--accent)"
+              >Start free trial</a
+            >
+            <a
+              href="#features"
+              class="btn btn-outline-primary hero-secondary-btn mb-2"
+              >See how it works</a
+            >
+          </div>
+          <div class="hero-meta">
+            <span class="fw-semibold">No credit card • 14-day free trial</span>
+            <br />
+            Trusted by HR teams in 40+ countries.
+          </div>
+        </div>
+
+        <!-- MOCKUP -->
+        <div class="col-lg-6 mt-5 mt-lg-0 hero-mockup-wrapper">
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <div class="hero-card-title">Today’s new hires</div>
+              <div class="status-pill">All onboarding on track</div>
+            </div>
+            <div class="hero-card-body">
+              <div class="employee-row border-bottom border-1 border-light">
+                <div class="d-flex align-items-center">
+                  <div class="employee-avatar">AR</div>
+                  <div class="employee-info">
+                    <div class="employee-name">Aarav Rao</div>
+                    <div class="employee-role">Product Designer • Mumbai</div>
+                  </div>
+                </div>
+                <div class="employee-chip">Forms 100%</div>
+              </div>
+              <div class="employee-row border-bottom border-1 border-light">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="employee-avatar"
+                    style="background: linear-gradient(135deg, #a855f7, #6366f1)"
+                  >
+                    LM
+                  </div>
+                  <div class="employee-info">
+                    <div class="employee-name">Leena Mehta</div>
+                    <div class="employee-role">People Ops • Bengaluru</div>
+                  </div>
+                </div>
+                <div class="employee-chip">Docs e-signed</div>
+              </div>
+              <div class="employee-row">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="employee-avatar"
+                    style="background: linear-gradient(135deg, #22c55e, #14b8a6)"
+                  >
+                    JD
+                  </div>
+                  <div class="employee-info">
+                    <div class="employee-name">Jatin Desai</div>
+                    <div class="employee-role">Engineering • Remote</div>
+                  </div>
+                </div>
+                <div class="employee-chip">IT ready</div>
+              </div>
+
+              <div class="hero-card-footer">
+                <span>Average onboarding time</span>
+                <span><strong>3.2 days</strong> (↓ 42%)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-floating-tag">
+            98% of teams onboarded on time this quarter
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col-md-7">
+          <div class="section-label mb-2">Why PeopleWave</div>
+          <h2 class="h3 fw-bold text-dark mb-2">
+            Everything HR needs — in one clear view.
+          </h2>
+          <p class="text-muted">
+            From onboarding to performance reviews, PeopleWave keeps every
+            workflow, approval and people insight in a single, secure system.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="fw-bold">✓</span>
+            </div>
+            <div class="feature-title">Smart onboarding flows</div>
+            <p class="feature-text">
+              Auto-assign tasks to IT, finance, and managers. New hires get an
+              interactive checklist that works on any device.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="fw-bold">⏱</span>
+            </div>
+            <div class="feature-title">Leave & attendance in sync</div>
+            <p class="feature-text">
+              Sync time off, calendars, and shifts in real time. Approvals
+              happen directly in email, Slack, or Microsoft Teams.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="fw-bold">★</span>
+            </div>
+            <div class="feature-title">Performance without spreadsheets</div>
+            <p class="feature-text">
+              Run check-ins, 360s, and reviews in one place. Track goals and
+              calibration with beautiful, exportable reports.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMPLE PRICING / CTA -->
+  <section id="pricing" class="py-5" style="background: var(--primary-bg-light)">
+    <div class="container text-center">
+      <div class="section-label mb-2">Pricing</div>
+      <h2 class="h3 fw-bold text-dark mb-2">Simple, transparent pricing.</h2>
+      <p class="text-muted mb-4">
+        Only pay for active employees. All features included — no surprise
+        add-ons.
+      </p>
+      <div
+        class="d-inline-block px-4 py-3 rounded-4"
+        style="
+          background: #ffffff;
+          border: 1px solid rgba(148, 163, 184, 0.35);
+          box-shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
+        "
+      >
+        <div class="fw-semibold fs-5 mb-1">
+          Starting at <span style="color: var(--accent)">₹249 / employee</span>
+        </div>
+        <div class="text-muted mb-3" style="font-size: 0.9rem">
+          Billed monthly • Volume discounts available
+        </div>
+        <a
+          href="#demo"
+          class="btn btn-primary hero-cta-btn"
+          style="background: var(--accent); border-color: var(--accent)"
+          >Talk to sales</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO FORM (DUMMY) -->
+  <section id="demo" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div
+            class="p-4 p-md-5 rounded-4"
+            style="
+              background: #ffffff;
+              border: 1px solid rgba(148, 163, 184, 0.4);
+              box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+            "
+          >
+            <h3 class="h4 fw-bold mb-2">Book a 30-minute live demo</h3>
+            <p class="text-muted mb-4">
+              Share a few details and we’ll show you exactly how PeopleWave
+              fits your workflows.
+            </p>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Work email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="you@company.com"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Company</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Company name"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Team size</label>
+                  <select class="form-select">
+                    <option>1–50</option>
+                    <option>51–200</option>
+                    <option>201–500</option>
+                    <option>501–1000</option>
+                    <option>1000+</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">What should we focus on?</label>
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    placeholder="Onboarding, performance, payroll, etc."
+                  ></textarea>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary hero-cta-btn mt-4 w-100"
+                style="background: var(--accent); border-color: var(--accent)"
+              >
+                Request demo
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container d-flex flex-wrap justify-content-between">
+      <div class="mb-2">
+        © <span id="year"></span> PeopleWave HR Pvt. Ltd.
+      </div>
+      <div class="d-flex gap-3">
+        <a href="#">Privacy</a>
+        <a href="#">Security</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery, Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(function () {
+      // Update year
+      $("#year").text(new Date().getFullYear());
+
+      // Smooth scrolling for internal links
+      $('a[href^="#"]').on("click", function (e) {
+        var target = $($(this).attr("href"));
+        if (target.length) {
+          e.preventDefault();
+          $("html, body").animate(
+            {
+              scrollTop: target.offset().top - 70,
+            },
+            600
+          );
+        }
+      });
+
+      // Navbar background on scroll
+      var $nav = $(".navbar");
+      function onScroll() {
+        if ($(window).scrollTop() > 40) {
+          $nav.addClass("navbar-scrolled");
+        } else {
+          $nav.removeClass("navbar-scrolled");
+        }
+      }
+      onScroll();
+      $(window).on("scroll", onScroll);
+    });
+  </script>
+</body>
+</html>
