@@ -19,7 +19,8 @@
 body {
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: var(--sky-text);
-    background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 60%, #f8fbff 100%);
+    /* background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 60%, #f8fbff 100%); */
+     background: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -167,6 +168,11 @@ h1, h2, h3, h4, h5, h6 {
     /* background: linear-gradient(180deg, #d7ecff 0%, #f5fbff 50%, #f7fbff 100%); */
     position: relative;
     overflow: hidden;
+    background: linear-gradient(
+        180deg,
+        #c6e6f9 0%,   /* top blue */
+        #ffffff 100% /* fades into white */
+    );
 }
 
 .hero-header::before {
